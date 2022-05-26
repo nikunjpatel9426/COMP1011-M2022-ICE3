@@ -1,6 +1,29 @@
 package com.example.comp1011m2022ice3;
 
+/* Singleton */
 public class Utility {
+  // step 1 - create a private static instance member
+
+    private static Utility m_instance + null;
+
+    //step 2 - Make the default constructor private
+    private Utility(){}
+
+    // step 3 - create an public static access method that returns an instance of the class
+    private static Utility Instance()
+    {
+        // step 4 - ensure that your instance member variable is null
+        if(m_instance == null)
+        {
+            // step 5 - create an instance of the class and save a reference int the private variable
+            m_instance = new Utility();
+        }
+        //step 5- return an instance (reference) of the class
+        return m_instance;
+    }
+
+
+
 
     /*
 
@@ -8,7 +31,7 @@ public class Utility {
     * @param start - starting Vector
     * @param end - ending Vector
     * */
-    public static float Distance(Vector2D start,Vector2D end){
+    public float Distance(Vector2D start,Vector2D end){
 
         float diffXs = end.getX() - start.getX();
         float diffYs = end.getY() - start.getY();
