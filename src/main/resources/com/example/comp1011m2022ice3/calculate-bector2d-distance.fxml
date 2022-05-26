@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011m2022ice3.CalculateBector2dDistanceController">
+    <GridPane layoutX="146.0" layoutY="97.0" prefHeight="136.0" prefWidth="333.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.6666259765625" minWidth="10.0" prefWidth="112.6666259765625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.3333740234375" minWidth="10.0" prefWidth="18.666625976562514" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="97.3333740234375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.66668701171875" minWidth="10.0" prefWidth="23.33331298828125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="120.66668701171875" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="Starting Vector2D" />
+        <Label text="Ending Vector" GridPane.rowIndex="1" />
+        <Label text="x" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+        <Label text="x" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+        <Label text="y" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+        <Label text="y" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+        <TextField maxWidth="80.0" minWidth="80.0" prefWidth="80.0" GridPane.columnIndex="2" fx:id="x1TextField" />
+        <TextField fx:id="y1TextField" maxWidth="80.0" minWidth="80.0" prefHeight="25.0" prefWidth="80.0" GridPane.columnIndex="4" />
+        <TextField maxWidth="80.0" minWidth="80.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="x2TextField" />
+        <TextField fx:id="y2TextField" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" onAction="#onCalculateButtonClick" text="Calculate" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" onAction="#onResetButtonClick" text="Reset" GridPane.rowIndex="3" />
+        <TextField fx:id="resultTextField" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+    </GridPane>
+    <Label layoutX="164.0" layoutY="41.0" text="Calculate Vector2D Distance">
+        <font>
+          <Font size="24.0" />
+        </font>
+    </Label>
+</AnchorPane>
