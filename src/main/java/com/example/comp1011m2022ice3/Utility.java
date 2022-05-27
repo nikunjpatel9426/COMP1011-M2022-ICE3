@@ -1,5 +1,9 @@
 package com.example.comp1011m2022ice3;
 
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.TextField;
+
 /* Singleton */
 public final class Utility {
   // step 1 - create a private static instance member
@@ -46,6 +50,23 @@ public final class Utility {
         float diffXs = x2-x1;
         float diffYs = y2-y1;
         return (float) Math.sqrt(diffXs*diffXs + diffYs*diffYs);
+    }
+    public void ConfigureVector2DSpinner(Spinner<Double> spinner, double min, double max, double default_value, double increment_value){
+
+        SpinnerValueFactory<Double> spinnerValueFactory  = new SpinnerValueFactory.DoubleSpinnerValueFactory(min,max,default_value,increment_value);
+
+        spinner.setValueFactory(spinnerValueFactory);
+
+        TextField x1SpinnerTextField = spinner.getEditor();
+
+        x1SpinnerTextField.textProperty().addListener((observableValue, oldValue, newValue) -> {
+            try{
+                Float.parseFloat(newValue);
+            }catch(Exception e){
+                x1SpinnerTextField.setText(oldValue);
+            }
+        });
+
     }
 
 }

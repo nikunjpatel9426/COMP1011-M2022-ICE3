@@ -65,27 +65,10 @@ public class CalculateBector2dDistanceController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // configure each soinner
-        //step 1. Define a SpinnervalueFactory
-        SpinnerValueFactory<Double> x1spinnervalueFactory = new SpinnerValueFactory.DoubleSpinnerValueFactory(-1000.0, -1000.0, 0.0, 5.0);
-        //step 2. Set value factory
-        x1spinner.setValueFactory(x1spinnervalueFactory);
-        //step 3.get access to the spinner's TextField
-        TextField x1spinnerTextField = x1spinner.getEditor();
-
-        //step 4. create an Event Listener / Event Handler ->observer pattern
-
-
-        x1spinnerTextField.textProperty().addListener((observableValue, oldvalue, newValue) ->
-        {
-            try
-            {
-                Float.parseFloat(newValue);
-            } catch (Exception e)
-            {
-                x1spinnerTextField.setText(oldvalue);
-            }
-        });
+        Utility.Instance().ConfigureVector2DSpinner(x1spinner,-1000.0,1000.0,0.0,5.0);
+        Utility.Instance().ConfigureVector2DSpinner(x2spinner,-1000.0,1000.0,0.0,5.0);
+        Utility.Instance().ConfigureVector2DSpinner(y1spinner,-1000.0,1000.0,0.0,5.0);
+        Utility.Instance().ConfigureVector2DSpinner(y2spinner,-1000.0,1000.0,0.0,5.0);
     }
 }
 
