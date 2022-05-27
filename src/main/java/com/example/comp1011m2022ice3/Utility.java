@@ -1,16 +1,16 @@
 package com.example.comp1011m2022ice3;
 
 /* Singleton */
-public class Utility {
+public final class Utility {
   // step 1 - create a private static instance member
 
-    private static Utility m_instance + null;
+    private static Utility m_instance = null;
 
     //step 2 - Make the default constructor private
     private Utility(){}
 
     // step 3 - create an public static access method that returns an instance of the class
-    private static Utility Instance()
+    public static Utility Instance()
     {
         // step 4 - ensure that your instance member variable is null
         if(m_instance == null)
