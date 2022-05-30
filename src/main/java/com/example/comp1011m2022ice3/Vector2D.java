@@ -2,14 +2,25 @@ package com.example.comp1011m2022ice3;
 
 public class Vector2D {
 
+
     //Private fLoat initial Parameters
+    private int m_id;
     private float m_x;
     private float m_y;
+
 
     public Vector2D() {
     }
 
     //Accessors and mutators Methods
+    public int getID() {
+        return m_id;
+    }
+
+    public void setID(int id) {
+        m_id = id;
+    }
+
     public float getX() {
         return m_x;
     }
