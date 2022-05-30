@@ -27,7 +27,7 @@ public class Vector2D {
      * @param x
      * @param y
      */
-    public void vector2D(float x, float y)
+    public Vector2D(float x, float y)
     {
         m_id = -1;
         setX(x);
