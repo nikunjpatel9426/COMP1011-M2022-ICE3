@@ -39,11 +39,13 @@ public class CalculateBector2dDistanceController implements Initializable {
             float y2 = y2spinner.getValue().floatValue();
 
             Vector2D point1 = new Vector2D(x1, y1);
+            DBManager.Instance().insertVector2D(point1);
             Vector2D point2 = new Vector2D(x2, y2);
+            DBManager.Instance().insertVector2D(point2);
 
             float distance = Utility.Instance().Distance(point1, point2);
 
-            resultTextField.setText("" + distance);
+            resultTextField.setText(String.valueOf(distance));
 
         } catch (Exception e) {
             resultTextField.setText("Please Enter Valid Number");
