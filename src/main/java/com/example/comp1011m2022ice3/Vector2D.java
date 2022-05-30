@@ -15,7 +15,7 @@ public class Vector2D {
      * Default constructor
      * - set x and y components to 0.0f and id to -1
      */
-    public Vector2D(float x, float y) {
+    public Vector2D() {
     m_id = -1;
     setX(0.0f);
     setY(0.0f);
@@ -96,19 +96,11 @@ public class Vector2D {
 
     public Vector2D subtract(Vector2D vector) {
 
-        m_x += vector.getX() - m_x;
-        m_y += vector.getY() - m_y;
+        m_x = vector.getX() - m_x;
+        m_y = vector.getY() - m_y;
         return this;
     }
 
-    /**
-     * @return
-     */
-    public Vector2D substrct(Vector2D Vector) {
-        m_x = Vector.getX()-m_x;
-        m_y += Vector.getY()-m_y;
-        return this;
-    }
 
     @Override
     public String toString() {
