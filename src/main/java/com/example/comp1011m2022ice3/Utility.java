@@ -59,7 +59,7 @@ public final class Utility {
 
         TextField x1SpinnerTextField = spinner.getEditor();
 
-        x1SpinnerTextField.textProperty().addListener((observableValue, oldValue, newValue) -> {
+        x1SpinnerTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             try{
                 Float.parseFloat(newValue);
             }catch(Exception e){

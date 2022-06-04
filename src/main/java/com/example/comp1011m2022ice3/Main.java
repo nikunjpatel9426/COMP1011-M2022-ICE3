@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("calculate-bector2d-distance.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600  , 400);
-        stage.setTitle("Calculate Vector2D");
+        stage.setTitle("Calculate Vector2D Distance");
         stage.setScene(scene);
         stage.show();
     }
